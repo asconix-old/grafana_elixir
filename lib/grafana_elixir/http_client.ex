@@ -1,4 +1,4 @@
-defmodule GrafanaElixir.HTTPClient do
+defmodule GrafanaElixir.HttpClient do
 	use HTTPoison.Base
 
   def process_url(url) do
