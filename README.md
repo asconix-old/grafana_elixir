@@ -25,7 +25,7 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
   3. Configure API access in your project's configuration file `config/config.exs`:
 
   ```elixir
-  config :grafana,
+  config :grafana_elixir,
     api_host: "<url of your grafana server>",
     api_token: "<your api token>"
   ```
