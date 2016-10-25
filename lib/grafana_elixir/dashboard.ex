@@ -17,7 +17,7 @@ defmodule GrafanaElixir.Dashboard do
   def get, do: home
 
 	@doc """
-  Retrieve a dashboard with the given slug (URL-friendly version
+  Retrieve a dashboard with given slug (URL-friendly version
   of dashboard title)
     iex> {:ok, dash} = GrafanaElixir.Dashboard.get("my-fancy-dashboard")
     ...> Map.keys(dash)
@@ -38,4 +38,10 @@ defmodule GrafanaElixir.Dashboard do
     iex> Grafana.Dashboard.new(json)
   """
   def new(json), do: update json
+
+  @doc """
+  Delete an existing dashboard with given slug (URL-friendly
+  version of the dashboard title)
+  """
+  def delete(slug), do: "#{@base_url}/db/#{slug}" |> HttpClient.delete!
 end
