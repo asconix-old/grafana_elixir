@@ -1,5 +1,6 @@
 defmodule GrafanaElixirTest do
-  use ExUnit.Case
-  doctest GrafanaElixir
-  doctest GrafanaElixir.Login
+  use ExUnit.Case, async: false
+  # doctest GrafanaElixir
+  # doctest GrafanaElixir.Datasource
+  # doctest GrafanaElixir.Dashboard
 end

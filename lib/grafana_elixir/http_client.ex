@@ -2,7 +2,7 @@ defmodule GrafanaElixir.HttpClient do
 	use HTTPoison.Base
 
   def process_url(url) do
-    IO.inspect (Application.get_env(:grafana_elixir, :api_host) <> url)
+    IO.inspect(Application.get_env(:grafana_elixir, :api_host) <> url)
     Application.get_env(:grafana_elixir, :api_host) <> url
   end
 
